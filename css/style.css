@@ -161,6 +161,7 @@ footer div ul li a:hover {
 #section1 form {
     display: grid;
     padding: 15px;
+    gap: 20px;
 }
 
 #section1 form input {
@@ -170,6 +171,21 @@ footer div ul li a:hover {
     border-radius: 20px;
     background-color: var(--light-orange);
     box-shadow: 0px 4px 15px 0px #00000026;
+}
+
+#section1 form button{
+    display: grid;
+    background: linear-gradient(198.58deg, #FF7800 15.56%, #FFAE00 100%);
+    box-shadow: 0px 4px 4px 0px #00000040;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    width: 126px;
+    justify-self: center;
+    cursor: pointer;
+    font-family: var(--Inter);
+    font-size: 13px;
+    font-weight: 500;
 }
 
 #section1 form input::placeholder {
@@ -187,13 +203,10 @@ footer div ul li a:hover {
     border-radius: 20px;
 }
 
-#section1 div>a {
-    width: 126px;
-}
-
-#section1 div>a:hover,
+#section1 form button:hover,
 #section3 div>a:hover {
     transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
 }
 
 /* Section 2 */
@@ -216,6 +229,14 @@ footer div ul li a:hover {
     box-shadow: 0px 4px 15px 0px #00000026;
     border-radius: 12px;
     position: relative;
+}
+
+#work1,
+#work2,
+#work3 {
+    font-family: var(--Roboto);
+    font-weight: 500;
+    font-size: 16px;
 }
 
 #work1::before {
@@ -550,6 +571,10 @@ gap: 20px;
     padding-bottom: 20px;
 }
 
+#contactIcone a:hover{
+    color: var(--orange);
+}
+
 #sectionContact form{
     display: grid;
     gap: 20px;
@@ -606,7 +631,6 @@ gap: 20px;
  
 }
 
-
 /* loader */
 
 .loader-wrapper {
@@ -631,7 +655,20 @@ gap: 20px;
     height: 100px;
     animation: spin 1s linear infinite, fadeOutLoader 1s ease-out 2s forwards;
   }
-  
+
+
+  #transition{
+    position: fixed; /* Fixe le wrapper au viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    background-color: var(--white); 
+    animation: fadeOutBackground 2s 0.2s forwards; 
+    z-index: 1000;
+}
+
+
   @keyframes spin {
     0% { transform: rotate(0deg); } /* indique l'etat de depart de l'animation */
     100% { transform: rotate(360deg); } /* indique l'etat de fin de l'animation donc dans ce cas l'animation fera une rotation a 360°*/
